@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="../calc/css/style.css">
+</head>
+<body>
+    
+    <div class="image_arrow">
+        <a href="../index/index.html"><img src="../calc/img/arrow_left.png"></a>
+        <p><a href="../index/index.html">Вернуться к банкам</a></p>
+    </div>   
+
+    <div class="wrapper"> 
+        <div class="calc-body">
+            <h1>Кредитный калькулятор</h1>
+            <form action="#">
+                
+                <div class="form_inputs">
+                    <input type="number" placeholder="Сумма кредита" id="amount" class="amount">
+                    <input type="number" placeholder="Годовой процент" id="percent" class="percent">
+                    <input type="number" placeholder="Срок займа в месяцах" id="months" class="months">
+                </div>
+                
+                <button type='sumbit' id="count_btn">Рассчитать</button>
+                <button type='reset' id='clear_btn'>Очистить</button>
+            </form>
+            
+            <div id="values"></div>
+            <div id="monthly"></div>
+            <div id="calculation"></div>
+        </div>
+    </div>
+
+    <script src="../calc/js/script.js"></script>
+</body>
+</html>
