@@ -49,6 +49,9 @@ function addNewBank(){
     let bankPred = document.querySelector('.max_pred').value;
     let bankTerm = document.querySelector('.max_term').value;
 
+    
+    
+
 
     i++;
 
@@ -63,8 +66,12 @@ function addNewBank(){
     let newBankTerm = document.createElement('div');
     newBankTerm.innerHTML = (`<p><span class = 'bank_span'>Срок кредита</span>: ${bankTerm} month(s)</p>`);
 
-    
 
+    localStorage.setItem(`bank name ${i}`, bankName);
+    localStorage.setItem(`bank procent ${i}`, bankProc);
+    localStorage.setItem(`bank max credit ${i}`, bankCred);
+    localStorage.setItem(`bank min predoplata ${i}`, bankPred);
+    localStorage.setItem(`bank months ${i}`, bankTerm);
 
 
     removeStyles();
@@ -86,6 +93,7 @@ function addNewBank(){
         let isDelete = confirm(`Вы действительно хотите удалить этот банк?`)
         if(isDelete == true){
             newBank1.classList.add('inactive_1');
+            localStorage.clear();
         }
     
     })
@@ -95,6 +103,7 @@ function addNewBank(){
         let isDelete = confirm(`Вы действительно хотите удалить этот банк?`)
         if(isDelete == true){
             newBank2.classList.add('inactive_2');
+            localStorage.clear();
         }
     
     })
@@ -104,6 +113,7 @@ function addNewBank(){
         let isDelete = confirm(`Вы действительно хотите удалить этот банк?`)
         if(isDelete == true){
             newBank3.classList.add('inactive_3');
+            localStorage.clear();
         }
     
     })
@@ -157,4 +167,4 @@ function letterLimit (){
     
 }
 
-letterLimit();  
+letterLimit();
