@@ -18,13 +18,22 @@
         <div class="calc-body">
             <h1>Кредитный калькулятор</h1>
             <form action="#">
-                
+                <button id="select_btn">Синхронизировать</button>
+                <select id="form_select" class="form_select">
+                    <option value="">...</option>
+                    <option value="" id="option_1"></option>
+                    <option value="" id='option_2'></option>
+                    <option value="" id="option_3"></option>
+                </select>
+
                 <div class="form_inputs">
-                    <input type="number" placeholder="Сумма кредита" id="amount" class="amount">
-                    <input type="number" placeholder="Годовой процент" id="percent" class="percent">
-                    <input type="number" placeholder="Срок займа в месяцах" id="months" class="months">
+                    <input type="number" placeholder="Сумма кредита" id="amount" class="amount" value="">
+                    <input type="number" placeholder="Годовой процент" id="percent" class="percent" value="">
+                    <input type="number" placeholder="Срок займа в месяцах" id="months" class="months" value=""> 
                 </div>
                 
+                
+
                 <button type='sumbit' id="count_btn">Рассчитать</button>
                 <button type='reset' id='clear_btn'>Очистить</button>
             </form>
