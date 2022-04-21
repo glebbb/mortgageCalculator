@@ -1,14 +1,13 @@
-
-let buttonClear = document.getElementById('clear_btn');
-let finalCalculation = document.getElementById('calculation');
-let buttonCount = document.getElementById('count_btn');
-let finalValues = document.getElementById('values');
-let monthlyPayment = document.getElementById('monthly');
-let option1 = document.getElementById('option_1');
-let option2 = document.getElementById('option_2');
-let option3 = document.getElementById('option_3');
-let select = document.getElementById('form_select');
-let selectBtn = document.getElementById('select_btn');
+let buttonClear = document.querySelector('.clear_btn');
+let finalCalculation = document.querySelector('.calculation');
+let buttonCount = document.querySelector('.count_btn');
+let finalValues = document.querySelector('.values');
+let monthlyPayment = document.querySelector('.monthly');
+let option1 = document.querySelector('.option_1');
+let option2 = document.querySelector('.option_2');
+let option3 = document.querySelector('.option_3');
+let select = document.querySelector('.form_select');
+let selectBtn = document.querySelector('.select_btn');
 
             
 buttonClear.addEventListener('click', ()=>{
@@ -32,27 +31,49 @@ option3.innerHTML = `${localStorage.getItem('bank name 3')}`;
 selectBtn.addEventListener('click', ()=>{
     
     let data = select.value;
-
+    const amount = document.querySelector('.amount')
+    const minPred = document.querySelector('.min_pred')
     
-    let percent = document.querySelector('.percent');
-    let months = document.querySelector('.months');
+    const percent = document.querySelector('.percent');
+    const months = document.querySelector('.months');
+    const getPred1 = localStorage.getItem('bank min predoplata 1')/100;
+    const getPred2 = localStorage.getItem('bank min predoplata 2')/100;
+    const getPred3 = localStorage.getItem('bank min predoplata 3')/100;
 
-
-    if(data == `${localStorage.getItem('bank name 1')}`){
+    if(data == `${localStorage.getItem('bank name 1')}`){       
         percent.value = "";
         months.value = "";     
+        amount.value = "";
+        minPred.value = "";
+        minPred.value = `${localStorage.getItem(`bank min predoplata 1`)}`; 
         percent.value = `${localStorage.getItem('bank procent 1')}`;
         months.value = `${localStorage.getItem(`bank months 1`)}`;
+        amount.addEventListener('input', (e)=>{
+            minPred.value = (e.target.value*getPred1).toFixed(2);
+        })
+        
     } else if (data == `${localStorage.getItem('bank name 2')}`){
         percent.value = "";
-        months.value = "";            
+        months.value = "";
+        amount.value = "";
+        minPred.value = "";
+        minPred.value = `${localStorage.getItem(`bank min predoplata 2`)}`;
         percent.value = `${localStorage.getItem('bank procent 2')}`;
         months.value = `${localStorage.getItem(`bank months 2`)}`;
+        amount.addEventListener('input', (e)=>{
+            minPred.value = (e.target.value*getPred2).toFixed(2);
+        })
     } else if(data == `${localStorage.getItem('bank name 3')}`){
         percent.value = "";
-        months.value = "";     
+        months.value = "";   
+        amount.value = "";
+        minPred.value = "";
+        minPred.value = `${localStorage.getItem(`bank min predoplata 3`)}`;  
         percent.value = `${localStorage.getItem('bank procent 3')}`;
         months.value = `${localStorage.getItem(`bank months 3`)}`;
+        amount.addEventListener('input', (e)=>{
+            minPred.value = (e.target.value*getPred3).toFixed(2);
+        })
     }
 
     
@@ -63,6 +84,7 @@ function calculation(){
     let amount = document.querySelector('.amount').value;
     let percent = document.querySelector('.percent').value;
     let months = document.querySelector('.months').value;
+    
 
     let firstMessage = `<div class = 'first_message'>Сумма займа: <strong>${amount}$</strong><br>Годовой процент: <strong>${percent}%</strong><br>Срок займа <strong>${months} месяц(ев).</strong><br></div>`;
    
