@@ -18,29 +18,34 @@
         <div class="calc-body">
             <h1>Кредитный калькулятор</h1>
             <form action="#">
-                <button id="select_btn">Синхронизировать</button>
-                <select id="form_select" class="form_select">
+                <button class="select_btn">Синхронизировать</button>
+                <select class="form_select">
                     <option value="">...</option>
-                    <option value="" id="option_1"></option>
-                    <option value="" id='option_2'></option>
-                    <option value="" id="option_3"></option>
+                    <option value="" class="option_1"></option>
+                    <option value="" class='option_2'></option>
+                    <option value="" class="option_3"></option>
                 </select>
 
                 <div class="form_inputs">
-                    <input type="number" placeholder="Сумма кредита" id="amount" class="amount" value="">
-                    <input type="number" placeholder="Годовой процент" id="percent" class="percent" value="">
-                    <input type="number" placeholder="Срок займа в месяцах" id="months" class="months" value=""> 
+                    <p>Сумма кредита:</p>
+                    <input type="number" class="amount" value="">
+                    <p>Минимальная предоплата:</p>
+                    <input type="number" class="min_pred" value="">
+                    <p>Годовой процент:</p>
+                    <input type="number" class="percent" value="">
+                    <p>Срок займа в месяцах:</p>
+                    <input type="number" class="months" value=""> 
                 </div>
                 
                 
 
-                <button type='sumbit' id="count_btn">Рассчитать</button>
-                <button type='reset' id='clear_btn'>Очистить</button>
+                <button type='sumbit' class="count_btn">Рассчитать</button>
+                <button type='reset' class='clear_btn'>Очистить</button>
             </form>
             
-            <div id="values"></div>
-            <div id="monthly"></div>
-            <div id="calculation"></div>
+            <div class="values"></div>
+            <div class="monthly"></div>
+            <div class="calculation"></div>
         </div>
     </div>
 
