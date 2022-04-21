@@ -28,7 +28,7 @@ form{
     margin: 10px 0px 10px 0px;
     width: 270px;
     padding: 12px 15px;
-    background-color: #e5e5e5;
+    background-color: white;
     border-radius: 7px;
     font-weight: 500;
     font-size: 18px;
@@ -55,6 +55,13 @@ form input:focus{
     outline: none;
 }
 
+.form_inputs p{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
 
 
 form button{
@@ -67,19 +74,19 @@ form button{
     font-size: 14px;
 }
 
-#clear_btn{
+.clear_btn{
     background-color: rgba(231, 15, 15, 0.8);
 }
 
-#count_btn{
+.count_btn{
     background-color: rgba(0, 0, 255, 0.8);
 }
 
-#clear_btn:hover{
+.clear_btn:hover{
     background-color: rgba(231, 15, 15, 1);
 }
 
-#count_btn:hover{
+.count_btn:hover{
     background-color: rgba(0, 0, 255, 1);
 }
 
@@ -117,6 +124,7 @@ form button{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px 10px;
     font-display: column;
+    background-color: white;
 }
 
 .image_arrow img{
@@ -155,7 +163,7 @@ form button{
     width: 200px;
 }
 
-#select_btn{
+.select_btn{
     padding: 10px 10px;
     border-radius: 6px;
     cursor: pointer;
@@ -168,6 +176,6 @@ form button{
     background-color: rgba(68, 194, 219, 0.7);
 }
 
-#select_btn:hover{
+.select_btn:hover{
     background-color: rgba(68, 194, 219, 1);
 }
