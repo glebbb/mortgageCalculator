@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button a{
+    background-color: orange;
+    padding: 20px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.button_calculator a{
+    background-color: rgb(58, 127, 58);
+    padding: 20px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    margin: 0px 0px 100px 1000px;
+
+}
+
+.pop_up{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 2;
+    transform: translateY(-44.5%) scale(0);
+    transition: .4s ease-in-out;
+}
+
+.pop_up.active{
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+.pop_up_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.pop_up_body{
+    margin: auto;
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+    padding: 50px 15px 50px 15px;
+    position: relative;
+}
+
+.pop_up_body input{
+    display: block;
+    margin: 10px 0px 10px 0px;
+    width: 270px;
+    padding: 12px 15px;
+    background-color: white;
+    border: 2px solid #71747b;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #2b2c2e;
+}
+
+.pop_up_body input:focus{
+    border-color: orange;
+}
+
+.pop_up_body input:hover{
+    border-color: orange;
+}
+
+.pop_up_body input:focus{
+    outline: none;
+}
+
+.banc_proc{
+    content: "%";
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.pop_up_create {
+    cursor: pointer;
+    display: block;
+    margin: 30px 0px 10px 0px;
+    width: 145px;
+    padding: 16px 10px;
+    background-color: orange;
+    /* border: 2px solid #71747b; */
+    border: none;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #1c1d1e;
+}
+
+::placeholder{
+    font-style: italic;
+    font-size: 16px;
+}
+
+.new_bank_1, .new_bank_2, .new_bank_3{
+    max-width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orange;
+    background-color: rgba(255, 140, 0, 0.6);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: left;
+    justify-content: center;
+}
+
+.new_bank_1.inactive_1, .new_bank_2.inactive_2, .new_bank_3.inactive_3{
+    display: none;
+}
+
+.bank_span{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.title_bank{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pop_up_btn{
+    border: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.for_new_banks button{
+    width: 55px;
+    height: 20px;
+    margin-left: 220px;
+    border: 0.7px dashed rgb(74, 119, 198);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 140, 0, 0.2);
+}
+
+.button_delete_1, .button_delete_3, .button_delete_2{
+    margin-top: 5px;
+}
+
+.button_delete_1:hover{
+    color:red;
+}
+
+.button_delete_2:hover{
+    color:red;
+}
+
+.button_delete_3:hover{
+    color:red;
+}

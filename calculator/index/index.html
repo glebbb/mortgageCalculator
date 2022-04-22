@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    
+    <div class="wrapper">
+        
+        <div class="button">
+            <a href="#" class="open_pop_up">Создать банк</a>
+        </div>
+
+        <div class="button_calculator">
+            <a href="../calc/calculator.html">Кредитный калькулятор</a>
+        </div>
+    
+        <div class="pop_up">
+            <div class="pop_up_container">
+                <div class="pop_up_body">
+                   
+                    <p class="title">Создай новый банк:</p>
+
+                    <form action="#">
+                        <input type="text" placeholder="Название банка (max 10)" class="bank_name">
+                        <input type="number" placeholder="Процентная ставка (max 3)" class="bank_proc">
+                        <input type="number" placeholder="Макс. кредит (max 7)" class="max_cred">
+                        <input type="number" placeholder="Мин. предоплата(%) (max 3)" class="max_pred">
+                        <input type="number" placeholder="Срок кредита (max 3)" class="max_term">
+                        <button type = 'reset' class="pop_up_create">Создать</button>
+                        <button type= "reset" class="pop_up_btn">&#10006</button>
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
+    
+        <div class="for_new_banks">
+            <div class="new_bank_1">
+                <button class="button_edit_1">Ред.</button>
+                <button class="button_delete_1">Удалить</button>
+            </div>
+            <div class="new_bank_2">
+                <button class="button_edit_2">Ред.</button>
+                <button class="button_delete_2">Удалить</button>
+            </div>
+            <div class="new_bank_3">
+                <button class="button_edit_3">Ред.</button>
+                <button class="button_delete_3">Удалить</button>
+            </div>
+
+        </div>
+        
+        
+    </div>
+    
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>

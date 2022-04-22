@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="../calc/css/style.css">
+</head>
+<body>
+    
+    <div class="image_arrow">
+        <a href="../index/index.html"><img src="../calc/img/arrow_left.png"></a>
+        <p><a href="../index/index.html">Вернуться к банкам</a></p>
+    </div>   
+
+    <div class="wrapper"> 
+        <div class="calc-body">
+            <h1>Кредитный калькулятор</h1>
+            <form action="#">
+                <button class="select_btn">Синхронизировать</button>
+                <select class="form_select">
+                    <option value="">...</option>
+                    <option value="" class="option_1"></option>
+                    <option value="" class='option_2'></option>
+                    <option value="" class="option_3"></option>
+                </select>
+
+                <div class="form_inputs">
+                    <p>Сумма кредита:</p>
+                    <input type="number" class="amount" value="">
+                    <p>Минимальная предоплата:</p>
+                    <input type="number" class="min_pred" value="">
+                    <p>Годовой процент:</p>
+                    <input type="number" class="percent" value="">
+                    <p>Срок займа в месяцах:</p>
+                    <input type="number" class="months" value=""> 
+                </div>
+                
+                
+
+                <button type='sumbit' class="count_btn">Рассчитать</button>
+                <button type='reset' class='clear_btn'>Очистить</button>
+            </form>
+            
+            <div class="values"></div>
+            <div class="monthly"></div>
+            <div class="calculation"></div>
+        </div>
+    </div>
+
+    <script src="../calc/js/script.js"></script>
+</body>
+</html>
